@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Converter</title>
+		<!-- Load stylesheets based on viewport  -->
+
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 700px)" href="main.css">
+		<link rel="stylesheet" type="text/css" media="screen and (max-width: 500px)" href="small.css">
+		<link rel="stylesheet" type="text/css" media="screen and (min-width: 500px) and (max-width: 700px)" href="medium.css">
+		<link rel="stylesheet" type="text/css" href="common.css">
+		<!-- Load in custom fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+		
+		<header>
+			<h1>Converter</h1>
+		</header>
+		<div id="content">
+			<div id="nav-content">
+				<div id="international" class="nav-bar">
+					<div id="currency" class="nav-item" onclick="currency()">Currency</div>
+					<div id="languages" class="nav-item" onclick="languages()">Languages</div>
+				</div>
+				<div id="computer-science" class="nav-bar">
+					<div id="bits" class="nav-item" onclick="bits()">Bits</div>
+					<div id="bytes" class="nav-item" onclick="bytes()">Bytes</div>
+				</div>
+				<div id="science" class="nav-bar">
+					<div id="mass" class="nav-item" onclick="mass()">Mass</div>
+					<div id="volume" class="nav-item" onclick="volume()">Volume</div>
+				</div>
+				<div id="science" class="nav-bar">
+					<div id="distance" class="nav-item" onclick="distance()">Distance/Length</div>
+					<div id="velocity" class="nav-item" onclick="velocity()">Speed/Velocity</div>
+				</div>
+			</div>
+			<div id="main-container">
+				<div id="converter">
+					<div class="conversion-block">
+						<div> <input id="input-type" type="text"></input> </div>
+						<div id="dropdown-input" class="dropdown"> 
+						</div>
+					</div>
+					<div id="to-text"> Select something to convert! </div>
+					<div class="conversion-block">
+						<div> <input id="output-type" type="text"></input> </div>
+						<div id="dropdown-output" class="dropdown"> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div>Currently all that works is Currency (barely). All of the nav-items change the title of the converter as well.</div>
+			<div>Name:  Avi Frankl</div>
+			<div>SID: 20138853</div>
+			<div>Email: <span style="color:blue;"> afrankl@berkeley.edu </div>
+		</footer>
+		<script type="text/javascript" src="converter.js"></script>
+	</body>
+</html>

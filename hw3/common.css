@@ -1,0 +1,84 @@
+header {
+	font-size: 20px;
+	margin: 10px 0 10px;
+	width: 100%;
+	background-color: dimgrey;
+	color: orange;
+	text-align: center;
+}
+
+body {
+	margin: 20px 0;
+	font-size: 18px;
+}
+
+#international {
+		background-color: green;
+	}
+
+#computer-science {
+		background-color: purple;
+}
+
+#science {
+	background-color: blue;
+}
+
+.nav-item {
+	background-color: black;
+	color: white;
+	text-align: center;
+	margin: 5px;
+	padding: 5px;
+}
+
+.nav-item:hover {
+	background-color: dimgrey;
+	cursor: pointer;
+}
+
+#converter {
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+	background-color: dimgrey;
+}
+
+.conversion-block {
+	display: flex;
+}
+
+.conversion-block div {
+	margin: 10px;
+	width: 50%;
+}
+
+#to-text {
+	margin: 2%;
+	color: white;
+	position: relative;
+	width: 90%;
+	text-align: center;
+}
+
+.dropdown {
+	background-color: orange;
+	margin: 10px;
+	padding: 5px;
+}
+
+.dropdown div {
+	background-color: dimgrey;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+}
+
+footer {
+	font-size: 10px;
+	margin-top: 20px;
+}
+
+footer div {
+	margin-top: 2px;
+}

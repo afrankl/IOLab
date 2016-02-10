@@ -1,0 +1,35 @@
+
+#content {
+	display: flex;
+	justify-content:flex-start;
+	align-items: flex-start;
+}
+
+#nav-content{
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+}
+
+.nav-bar {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.nav-item {
+	width: auto;
+}
+
+#main-container {
+	width: 100%;
+}
+
+#converter {
+	margin: 0px 10px 0px;
+}
+
+
+
+
+

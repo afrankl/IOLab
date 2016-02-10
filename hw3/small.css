@@ -1,0 +1,28 @@
+
+#content {
+	display: flex;
+	flex-direction: column-reverse;
+}
+#nav-content {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+#nav-content div {
+	display: flex;
+	justify-content: space-between;
+}
+
+#converter {
+	margin: 0px 10px 30px;
+}
+
+.nav-item {
+	width: 100%;
+}
+
+
+
+
+

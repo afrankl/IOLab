@@ -1,0 +1,27 @@
+
+#content {
+	display: flex;
+	flex-flow: column;
+}
+
+#nav-content{
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.nav-bar {
+	width: 50%;
+	display: flex;
+}
+
+.nav-item {
+	width: 100%;
+	font-size: 15px;
+}
+
+#converter {
+	margin: 30px 10px 30px;
+}
+
+
+
