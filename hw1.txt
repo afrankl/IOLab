@@ -1,0 +1,13 @@
+#!/bin/bash
+
+mkdir hw1dir		# 2) Makes hw1dir
+cd ./hw1dir		# 1) Changes directory to newly made directory
+mv ../hw1dir ../hw1dir2	# 3) Changes the name of the current directory to hw1dir2
+ls ..			# 4) Shows the contents of the super directory (hw1dir2 hw1.txt)
+mv ../hw1.txt ./	# 5) moves hw1.txt to current directory
+cp -i ./hw1.txt ../	# 6) Copies hw1.txt to the superdirectory
+grep "cd" ./*.txt	# 7) Searches for "cd" in all .txt files
+cd ../
+rm -rf ./hw1dir2
+ssh -Y cs169-bu@cory.eecs.berkeley.edu # 8) ssh into a remote computer
+
