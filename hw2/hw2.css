@@ -1,0 +1,128 @@
+body {
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+	font-size: 16px;
+	background-color: dimgrey;
+	color: #696969;
+	padding: 3px;
+}
+
+#main {
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: #ffffff;
+	border-radius: 0 0 5px 5px;
+}
+
+h1 {
+	font-family: Georgia, serif;
+	border-bottom: 3px solid #cc9900;
+	color: #996600;
+	font-size: 30px;
+	position: relative;
+}
+
+h1 div.right {
+	color: black;
+	font-size:15px;
+	position: absolute;
+	bottom: 5px;
+	right: 0;
+}
+
+@media screen and (max-width: 700px) {
+	h1 div.right {
+		display: none;
+	}
+}
+
+#navbar {
+	background-color: #996600;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	list-style-type: none;
+}
+
+#menu {
+	width: 200px;
+	overflow: scroll;
+	background-color: #cc9900;
+	list-style-type: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	left: 0;
+	margin: 0;
+	top-margin: 10px;
+	bottom-margin: 10px;
+	padding: 5px;
+	height: fill;
+}
+
+div.content {
+	vertical-align: top;
+	display: inline-block;
+	color: black;
+	width: 100%;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+div.title {
+	font-size: 50px;
+	text-align: center;
+}
+
+div.example {
+	background-color: dimgrey;
+	padding: 20px;
+}
+
+div.example div.inner {
+	background-color: white;
+	padding: 10px;
+	width: fill;
+}
+
+li.left {
+	float: left;
+}
+
+li.right {
+	float: right;
+}
+
+div.minititle {
+	font-size: 30px;
+}
+
+
+a.blocks {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+a.blocks:hover:not(.active) {
+	background-color:#cc9900;
+}
+
+a.lists {
+	display: block;
+	color: white;
+	text-align: center
+	left: 0;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+a.lists:hover:not(.active) {
+	background-color:white;
+	color:#cc9900;
+}
