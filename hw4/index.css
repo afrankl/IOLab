@@ -13,7 +13,6 @@ h1 {
 
 div.container {
 	width: 40%;
-	margin: 5px;
 }
 
 div.title {
@@ -26,21 +25,26 @@ div.title {
 }
 
 div.content {
-	padding: 10px;
+	padding: 5px;
+}
+
+form {
+	margin-top: 10px;
 }
 
 div.item {
 	display: flex;
 	width 100%;
 	justify-content: space-between;
+	padding: 5px;
 }
 
 #done-item {
 	color: green;
+	align-items: center;
 }
 
 #done-item img{
 	width: 20px;
 	height: 20px;
-
 }

@@ -1,11 +1,10 @@
 
-// Generate a new <div> element that represents a to-do item.  Used in both addToList() and unmark()
-function generate(text) {
-	var item = $('<div/>', {class:'item'}) // Create the empty div
-	var text = $('<div/>', {text:text, class:'text'}) // Create a <div> containing the To-do text, with class 'text' so that it can be easily found later on   
-	var doneButton = $('<button/>', {text: 'Complete', onclick: 'complete(this)'}) // Create a done button which, on click, performs the complete function
-	item.append(text) ; item.append(doneButton) // Append the newly created elements to the item
-	return item
+// Generates a to-do list item and adds it to the to-do section
+function addToList() {
+	var text = $('input', '#new-item-form').val() // get the text inside the 'Add to List' text-field
+	var item = generate(text) // create a new to-do item
+	var content = $('.content', '#todo') // grab the content of the to-do section
+	content.prepend(item) // Put the item at the top of the list
 }
 
 //  Function called when an item in the to-do section's "complete" button is clicked
@@ -13,7 +12,7 @@ function generate(text) {
 function complete(completeButton) {
 	var item = $(completeButton).parent() // get the item that contains the complete button
 	completeButton.remove() // remove the complete button
-	item.attr('id', 'done-item') # // Make the new item a "done-item"
+	item.attr('id', 'done-item') // Make the new item a "done-item"
 	item.prepend($('<img/>', {src: './check.png'})) // Add a green check mark to the beginning
 	item.append($('<button/>', {text: 'Unmark', onclick: 'unmark(this)'})) // Add the unmark button to the end
 	$('.content', '#done').prepend(item) // Add the item to them done content
@@ -29,10 +28,12 @@ function unmark(unmarkButton) {
 	item.remove() // remove the item from the completed section
 }
 
-// Generates a to-do list item and adds it to the to-do section
-function addToList() {
-	var text = $('input', '#new-item-form').val() // get the text inside the 'Add to List' text-field
-	var item = generate(text) // create a new to-do item
-	var content = $('.content', '#todo') // grab the content of the to-do section
-	content.prepend(item) // Put the item at the top of the list
+// Generate a new <div> element that represents a to-do item.  Used in both addToList() and unmark()
+function generate(text) {
+	var item = $('<div/>', {class:'item'}) // Create the empty div
+	var text = $('<div/>', {text:text, class:'text'}) // Create a <div> containing the To-do text, with class 'text' so that it can be easily found later on   
+	var doneButton = $('<button/>', {text: 'Complete', onclick: 'complete(this)'}) // Create a done button which, on click, performs the complete function
+	item.append(text) ; item.append(doneButton) // Append the newly created elements to the item
+	return item
 }
+
