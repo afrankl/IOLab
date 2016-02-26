@@ -1,23 +1,30 @@
 // Event hander for calling the SoundCloud API using the user's search query
 var offset = 0;
+var limit = 20;
+var current_query;
 
 function callAPI(query) {
 	$.get("https://api.soundcloud.com/tracks?client_id=b3179c0738764e846066975c2571aebb",
 		{'q': query,
-		'limit': '1',
+		'limit': '' + limit + '',
 		'offset' : '' + offset + ''},
 		function(data) {
 			// PUT IN YOUR CODE HERE TO PROCESS THE SOUNDCLOUD API'S RESPONSE OBJECT
 			// HINT: CREATE A SEPARATE FUNCTION AND CALL IT HERE
-			handleData(data);
+			if (data.length > 0) {
+				handleData(data);
+			}
 		},'json'
 	);
-	offset += 1;
+	offset += limit;
 }
 
 function search() {
 	var query = $('input','#search').val();
-	console.log(query);
+	if (current_query != query) {
+		offset = 0;
+		current_query = query;
+	}
 	callAPI(query);
 }
 
@@ -29,6 +36,10 @@ function handleData(data) {
 }
 
 function createQueryTag(sc_obj) {
+	var item = $('<div/>', {class: 'query-item'}); // initialize query-item 
+	var img_src = sc_obj.artwork_url
+	var title = sc_obj.title
+	var add_to_playlist = $('<img/>', {'src': })
 
 }
 
