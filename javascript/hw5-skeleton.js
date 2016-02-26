@@ -29,18 +29,23 @@ function search() {
 }
 
 function handleData(data) {
+	var results = $('#results')
 	for (var i = 0; i < data.length; i++) {
 		var sc_obj = data[i];
-		console.log(sc_obj);
+		results.append(createQueryItem(sc_obj))
 	}
 }
 
-function createQueryTag(sc_obj) {
+function createQueryItem(sc_obj) {
 	var item = $('<div/>', {class: 'query-item'}); // initialize query-item 
 	var img_src = sc_obj.artwork_url
 	var title = sc_obj.title
-	var add_to_playlist = $('<img/>', {'src': })
-
+	var add_to_playlist = $('<button/>', {'text': 'Add to Playlist',
+											'onclick': 'add(this)'})
+	var artwork = $('<img/>', {class: 'query-image',
+								'src': '' + img_src + ''})
+	item.append(add_to_playlist) ; item.append(artwork) ; item.append(title)
+	return item;
 }
 
 // 'Play' button event handler - play the track in the Stratus player

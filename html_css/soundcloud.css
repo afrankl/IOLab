@@ -1,0 +1,36 @@
+h1 {
+	display: flex;
+	justify-content: space-between;
+}
+#content {
+	display: flex;
+	justify-content: space-between;
+}
+
+#playlist {
+	width: 300px;
+}
+
+#query {
+	width: 70%;
+	height: fill;
+	overflow: scroll;
+}
+
+#results {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.query-item {
+	width: 28%;
+	background-color: yellow;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 2%;
+}
+
+.query-image {
+	height: 150px;
+}
