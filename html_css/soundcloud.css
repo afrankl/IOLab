@@ -1,7 +1,21 @@
+body {
+	margin: 0px;
+}
 h1 {
+	padding: 5px;
 	display: flex;
 	justify-content: space-between;
+	background-color: yellow;
 }
+
+#search input{
+	width: 200px;
+}
+
+.title {
+	color: blue;
+}
+
 #content {
 	display: flex;
 	justify-content: space-between;
@@ -22,6 +36,30 @@ h1 {
 	flex-wrap: wrap;
 }
 
+
+.buttons {
+	display: flex;
+	justify-content: space-between;
+}
+
+.buttons button {
+	width: 50%;
+	margin: 2px;
+}
+
+#playlist {
+	background-color: yellow;
+	border-color: black;
+	border-width: 2px;
+	border-style: solid;
+}
+
+#playlist div.title {
+	font-size: 20px;
+	width: 100%;
+	text-align: center;
+}
+
 .query-item {
 	width: 28%;
 	background-color: yellow;
@@ -31,6 +69,43 @@ h1 {
 	margin: 2%;
 }
 
-.query-image {
-	height: 150px;
+.query-item div.content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
 }
+
+.query-item div.content img{
+	width: 100%;
+	height: 100px;
+}
+
+.playlist-item {
+	display: flex;
+	flex-direction: column;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 5px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: black;
+	border-bottom-color: black;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	background-color: white;
+}
+
+.playlist-item div.content{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.playlist-item div.content img{
+	height: 40px;
+}
+
+
+
+

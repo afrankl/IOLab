@@ -2,27 +2,30 @@
 	<head>
 		<title>HW5: SoundCloud replica</title>
 	</head>
-	<h1>
-		<div> SoundCloud </div>
-		<div id="search">
-			<input type="text"></input>
-			<button onclick="search()"> Search </button>
-		</div>
-	</h1>
+	
 	<body>
+		<h1>
+			<div class="title"> SoundCloud </div>
+			<div id="search">
+				<input type="text"></input>
+				<button onclick="search()"> Search </button>
+			</div>
+		</h1>
 		<div id="content"> 
+			<div id="playlist">
+				<div class="title"> Playlist </div>
+				<div id="songs"> </div>
+			</div>
 			<div id="query">
 				<div id="results"> </div>
 				<div id="status"></div>
 			</div>
-			<div id="playlist"> 
-				<div id="toolbar"></div>
-				<div id=""> </div>
-			</div>
 		</div>
-		<div id="playing"> </div>
+		<div id="playing"> 
+		</div>
 	</body>
 	<script type='text/javascript' src="http://code.jquery.com/jquery-1.7.2.js"></script> 
+	<script type='text/javascript' src="https://stratus.soundcloud.com/stratus.js"></script> 
 	<script type='text/javascript' src="../javascript/hw5-skeleton.js"></script> 
 	<link rel="stylesheet" type="text/css" href="./soundcloud.css"> </link>
 </html>
