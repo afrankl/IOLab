@@ -123,6 +123,20 @@ function move_down(button) {
 }
 
 
+//EXTRA CREDIT: INFINITE SCROLLING
+$(function(){
+   $(window).scroll(function(){
+       if($(document).height()==$(window).scrollTop()+$(window).height()){
+       		var query = $('input','#search').val();
+       		if (query != null && query != "") {
+       			search()
+       		}
+           
+       }
+   });
+});
+
+
 // 'Play' button event handler - play the track in the Stratus player
 function changeTrack(url) {
 	// Remove any existing instances of the Stratus player

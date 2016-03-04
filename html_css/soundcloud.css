@@ -49,9 +49,15 @@ h1 {
 
 #playlist {
 	background-color: yellow;
-	border-color: black;
+	border-color: blue;
 	border-width: 2px;
 	border-style: solid;
+	margin: 2px;
+}
+
+#songs {
+	height: 400px;
+	overflow: scroll;
 }
 
 #playlist div.title {
@@ -67,6 +73,9 @@ h1 {
 	flex-direction: column;
 	justify-content: space-around;
 	margin: 2%;
+	border-color: black;
+	border-width: blue;
+	border-style: solid;
 }
 
 .query-item div.content{
