@@ -1,3 +1,4 @@
+{% extends "base.html"%}
 {% block title %}
 	Login
 {% endblock %}
@@ -6,15 +7,22 @@
 <header> Login </header>
 {% endblock %}
 <div class="main-container">
-    <h3>Let's get you logged in</h3>
     {% block content %}
+    {% if request.args.get('attempt') %}
+        <div> Username and password not in database </div> <br>
+    {% endif %}
+    <h3>Let's get you logged in</h3>
 	<form action="login" method='post'>
-
         <br> Email: <br>
         <input type="text" name="email"> </input>
         <br> Password: <br>
         <input type="text" name="password"> </input> <br>
-        <input class="action-button" id="login" type="submit" value="Submit">
+        <input class="action-button" id="login" type="submit" value="Log in"></input>
+    </form>
+    <h3> Or let's create a new account </h3>
+    <form action="create" method='get'>
+        <input class="action-button" id="create" type="submit" value="Create Account">
+        </input>
     </form>
     {% endblock %}
 </div>
